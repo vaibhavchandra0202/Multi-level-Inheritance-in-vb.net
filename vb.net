@@ -1,0 +1,27 @@
+Module Module1
+    Public Class clsWorld
+        Public Sub fnDisplay()
+            MsgBox("Hello from Base Class clsWorld")
+        End Sub
+    End Class
+    Public Class clsAsia : Inherits clsWorld
+        Public Sub fnAsiaShow()
+            MsgBox("Asia Derived class Method")
+        End Sub
+    End Class
+    Public Class clsIndia : Inherits clsAsia
+        Public Sub fnIndiaShow()
+            MsgBox("India Derived class Method")
+        End Sub
+    End Class
+    Sub Main()
+        Console.ReadKey()
+        Dim obj1 As New clsWorld
+        obj1.fnDisplay()
+        Dim obj2 As New clsAsia
+        obj2.fnAsiaShow()
+        Dim obj3 As New clsIndia
+        obj3.fnIndiaShow()
+        Console.ReadKey()
+    End Sub
+End Module
